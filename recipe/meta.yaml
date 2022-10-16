@@ -17,7 +17,7 @@ build:
   # skipping windows build due to no windows build for r-geiger dependency
   # r-phylolm requires R4
   skip: true  # [win or r_base == "3.6"]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
