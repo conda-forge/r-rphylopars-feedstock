@@ -1,4 +1,4 @@
-{% set version = "0.3.9" %}
+{% set version = "0.3.10" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,14 +10,14 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/Rphylopars_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/Rphylopars/Rphylopars_{{ version }}.tar.gz
-  sha256: b867f0f793c40e48232029f49a8236e13d08e0cbd49567ed60c59e56f29dbf15
+  sha256: c635861d4fcaa489ff8d1dbd10b4c63e32f4865a9c6972d58682689c738e3a20
 
 build:
   merge_build_host: true  # [win]
   # skipping windows build due to no windows build for r-geiger dependency
   # r-phylolm requires R4
   skip: true  # [win or r_base == "3.6"]
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
