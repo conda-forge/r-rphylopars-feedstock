@@ -3,6 +3,7 @@ About r-rphylopars-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rphylopars-feedstock/blob/main/LICENSE.txt)
 
+
 About r-rphylopars
 ------------------
 
@@ -11,6 +12,7 @@ Home: https://github.com/ericgoolsby/Rphylopars/wiki
 Package license: GPL-2.0-or-later
 
 Summary: Tools for performing phylogenetic comparative methods for datasets with with multiple observations per species (intraspecific variation or measurement error) and/or missing data (Goolsby et al. 2017). Performs ancestral state reconstruction and missing data imputation on the estimated evolutionary model, which can be specified as Brownian Motion, Ornstein-Uhlenbeck, Early-Burst, Pagel's lambda, kappa, or delta, or a star phylogeny.
+
 About r-rphylopars
 ------------------
 
@@ -146,7 +148,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
