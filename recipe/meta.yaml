@@ -1,6 +1,5 @@
 {% set version = "0.3.10" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-rphylopars
@@ -13,11 +12,10 @@ source:
   sha256: c635861d4fcaa489ff8d1dbd10b4c63e32f4865a9c6972d58682689c738e3a20
 
 build:
-  merge_build_host: true  # [win]
   # skipping windows build due to no windows build for r-geiger dependency
   # r-phylolm requires R4
   skip: true  # [win or r_base == "3.6"]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -25,7 +23,9 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('m2w64_cxx') }}      # [win]
     - {{ posix }}filesystem        # [win]
@@ -50,7 +50,6 @@ requirements:
     - r-phytools
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-mass
     - r-matrix
     - r-rcpp
